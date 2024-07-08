@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Pomodoro timer</title>
+</head>
+<body>
+    <h1>Pomodoro timer</h1>
+    <section>
+        <h2 id="time_mode">Concentración</h2>
+        <div class="time">
+            <h2 id="time">00:00:00</h2>
+        </div>
+        <div class="timers_continer">
+            <div class="focus_timer">
+                <span class="bold">Focus</span>
+                <div class="timer">
+                    <input type="number" max="99" min="0" value="0">
+                    <span>:</span>
+                    <input type="number" max="59" min="0" value="0">
+                    <span>:</span>
+                    <input type="number" max="59" min="0" value="0">
+                </div>
+            </div>
+
+            <div class="rest_timer">
+                <span class="bold">Rest</span>
+                <div class="timer">
+                    <input type="number" max="99" min="0" value="0">
+                    <span>:</span>
+                    <input type="number" max="59" min="0" value="0">
+                    <span>:</span>
+                    <input type="number" max="59" min="0" value="0">
+                </div>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button id="iniciar_btn">Iniciar</button>
+            <button id="pausar_btn">Pausar</button>
+            <button id="reiniciar_btn">Reiniciar</button>
+            <button id="cambiar_btn">Cambiar</button>
+        </div>
+    </section>
+</body>
+<script src="./script.js"></script>
+</html>

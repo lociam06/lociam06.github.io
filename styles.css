@@ -1,0 +1,105 @@
+*{
+    font-family: Helvetica, sans-serif;
+}
+
+body{
+    background: linear-gradient(45deg, #f59 0%, #ff0 50%, #f59 100%);
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    text-align: center;
+    padding: 30px 0;
+    margin: 0;
+    font-size: 45px;
+}
+
+#time_mode{
+    margin: 0 0 20px 0;
+    text-shadow: 1px 1px 2px #000;
+    color: #36f;
+}
+
+.time{
+    height: 250px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./img/timer\ img.png);
+    background-size: cover;
+}
+.time #time{
+    margin-top: 70px;
+}
+
+section{
+    width: 50%;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timers_continer{
+    display: flex;
+    margin: 30px;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+
+.timers_continer > div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.timers_continer > div > span{
+    font-weight: bold;
+}
+
+.timers_continer > div .timer input{
+    width: 40px;
+    background-color: #ddd;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 18px;
+    outline: none;
+}
+.timers_continer > div .timer input:focus{
+    box-shadow: 0px 0px 2px #555;
+}
+
+.buttons{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+}
+
+.buttons button{
+   width: 20%;
+   height: 40px;
+   border: none;
+   border-radius: 20px;
+   transition: opacity .5s;
+}
+.buttons button:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.buttons #iniciar_btn{ background-color: #4f4;}
+.buttons #pausar_btn{ background-color: #ff3;}
+.buttons #reiniciar_btn{ background-color: #f22;}
+.buttons #cambiar_btn{ background-color: #36f;}
+
