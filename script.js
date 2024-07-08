@@ -42,8 +42,7 @@ for(let i = 0; i < allTimeImputs.length; i++){
         else if(input.value < parseInt(input.min)) input.value = parseInt(input.min);
         
         if(input.value == "") input.value = 0;
-        focusTimeValues = Array.from(focusTimeInputs).map(input => input.value);
-        restTimeValues = Array.from(restTimeInputs).map(input => input.value);
+        reasingArrayTimerValues();
         timeWorker.postMessage({command: "reasing time", focusTimeValues: focusTimeValues, restTimeValues: restTimeValues});
     })
 

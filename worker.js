@@ -164,7 +164,7 @@ onmessage = function(e){
     }
 
     if(e.data.command == "restart"){
-        ReiniciarTimer();
+        ReiniciarTimer(true);
     }
 
     if(e.data.command == "change"){
