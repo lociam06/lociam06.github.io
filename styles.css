@@ -1,12 +1,26 @@
+:root{
+    --pc: #0ff;
+    --sc: #0074D9;
+    --bgc: #111111; 
+    --text-color: #fff;
+    --green-neon: #39FF14;
+    --pink-neon: #FF1493;
+    --text-shadow-time-mode: var(--pink-neon);
+}
+
 *{
     font-family: Helvetica, sans-serif;
 }
 
 body{
-    background: linear-gradient(45deg, #f59 0%, #ff0 50%, #f59 100%);
+    background-color: #000;
+    background-image: url(./img/imagen\ de\ fondo\ 2.avif);
+    background-size:cover;
+    background-position: 50% 50%;
     height: 100vh;
     padding: 0;
     margin: 0;
+    
 }
 
 h1{
@@ -14,36 +28,43 @@ h1{
     padding: 30px 0;
     margin: 0;
     font-size: 45px;
-}
-
-#time_mode{
-    margin: 0 0 20px 0;
-    text-shadow: 1px 1px 2px #000;
-    color: #36f;
-}
-
-.time{
-    height: 250px;
-    width: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(./img/timer\ img.png);
-    background-size: cover;
-}
-.time #time{
-    margin-top: 70px;
+    color: var(--text-color);
 }
 
 section{
     width: 50%;
     margin: auto;
-    background-color: #fff;
     border-radius: 10px;
+    border: 3px solid var(--pc);
+    box-shadow: 0px 0px 10px var(--pc),
+    inset 0px 0px 10px var(--pc);
     padding: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #fff;
+    background-color: #111c;
+}
+
+#time_mode{
+    margin: 0 0 20px 0;
+    text-shadow: 0px 0px 20px var(--text-shadow-time-mode);
+    color: var(--pink-neon);
+    letter-spacing: 2px;
+}
+
+.time{
+    margin-top: 30px;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 3px solid var(--pc);
+    box-shadow: 0px 0px 10px var(--pc),
+    inset 0px 0px 10px var(--pc);
+    background-size: cover;
 }
 
 .timers_continer{
@@ -74,9 +95,10 @@ section{
     border-radius: 5px;
     font-size: 18px;
     outline: none;
+    transition: box-shadow .5 s;
 }
 .timers_continer > div .timer input:focus{
-    box-shadow: 0px 0px 2px #555;
+    box-shadow: 0 0 6px var(--pc);
 }
 
 .buttons{
@@ -87,19 +109,50 @@ section{
 }
 
 .buttons button{
-   width: 20%;
-   height: 40px;
-   border: none;
-   border-radius: 20px;
-   transition: opacity .5s;
+    width: 20%;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: transparent;
+    border: 3px solid var(--pc);
+    box-shadow: 0px 0px 5px var(--pc),
+    inset 0px 0px 5px var(--pc);
+    color: var(--text-color);
+    transition: opacity, background-color .5s;
 }
 .buttons button:hover{
     opacity: 0.5;
     cursor: pointer;
+    background-color: var(--pc);
 }
 
-.buttons #iniciar_btn{ background-color: #4f4;}
-.buttons #pausar_btn{ background-color: #ff3;}
-.buttons #reiniciar_btn{ background-color: #f22;}
-.buttons #cambiar_btn{ background-color: #36f;}
-
+/*responsive*/
+@media screen and (max-width: 750px){
+    h1{
+        font-size: 30px;
+        padding: 23px 0;
+    }
+    section{
+        width: 60%;
+        padding: 30px;
+    }
+    .time{
+        width: 150px;
+        height: 150px;
+        margin-top: 10px;
+    }
+    .time #time{
+        font-size: 20px;
+    }
+    .timers_continer{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .buttons{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .buttons button{
+        width: 47%;
+    }
+}

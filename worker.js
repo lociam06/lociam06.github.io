@@ -118,11 +118,11 @@ function CambiarTimeModeTittle(){
     let color;
     if(mainTimerID == 0) {
         text = "Descanso"
-        color = "#ff0"
+        color = "var(--green-neon)"
     }
     else if(mainTimerID == 1) {
         text = "Consentración"
-        color = "#36f"
+        color = "var(--pink-neon)"
     }
 
     postMessage({command: "chage time mode tittle", text: text, color: color})

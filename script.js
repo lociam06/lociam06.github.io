@@ -64,6 +64,7 @@ function modifiePageTittle(){
 function CambiarTimeModeTittle(text, color){
     timeMode.textContent = text;
     timeMode.style.color = color;
+    document.documentElement.style.setProperty("--text-shadow-time-mode", color)
 }
 
 //reasignar valores
