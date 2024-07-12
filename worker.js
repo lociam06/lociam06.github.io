@@ -92,8 +92,6 @@ function ReiniciarTimer(autoStop){
     postMessage({command: "reasing time"});
 
     UpdateDOM();
-    
-    reseted = true;
 }
 
 function CambiarTimer(){
