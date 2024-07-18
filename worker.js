@@ -75,8 +75,10 @@ function IniciarTimer(){
 }
 
 function PausarTimer(){
+    console.log(reseted);
     if(countEverySeconds != null) {
         clearInterval(countEverySeconds);
+        countEverySeconds = null;
         stopped = true;
     }
 }
@@ -84,6 +86,7 @@ function PausarTimer(){
 function ReiniciarTimer(autoStop){
     focusTime.reasing();
     restTime.reasing();
+    reseted = true;
 
     RestartGlobalTime();
 
