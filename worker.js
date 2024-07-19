@@ -75,7 +75,6 @@ function IniciarTimer(){
 }
 
 function PausarTimer(){
-    console.log(reseted);
     if(countEverySeconds != null) {
         clearInterval(countEverySeconds);
         countEverySeconds = null;
@@ -148,7 +147,6 @@ onmessage = function(e){
         //Declarando remporizadores
         focusTime = new Timer(e.data.focusTimeValues)
         focusTime.reasing();
-        console.log(focusTime)
 
         restTime = new Timer(e.data.restTimeValues)
         restTime.reasing();
