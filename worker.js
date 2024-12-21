@@ -85,11 +85,13 @@ function PausarTimer(){
 function ReiniciarTimer(autoStop){
     focusTime.reasing();
     restTime.reasing();
-    reseted = true;
-
+    
     RestartGlobalTime();
-
-    if(autoStop) PausarTimer();
+    
+    if(autoStop) {
+        reseted = true;
+        PausarTimer();
+    }
     
     postMessage({command: "reasing time"});
 
